@@ -1,0 +1,29 @@
+{
+  "C_Cpp.default.compilerPath": "D:\\msys64\\ucrt64\\bin\\g++.exe",
+  "files.associations": {
+    "*.ejs": "html",
+    "iosfwd": "cpp",
+    "iostream": "cpp",
+    "ostream": "cpp",
+    "cmath": "cpp",
+    "random": "cpp",
+    "array": "cpp",
+    "bitset": "cpp",
+    "string_view": "cpp",
+    "initializer_list": "cpp",
+    "ranges": "cpp",
+    "span": "cpp",
+    "stacktrace": "cpp",
+    "regex": "cpp",
+    "valarray": "cpp",
+    "deque": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "vector": "cpp",
+    "format": "cpp",
+    "*.tcc": "cpp"
+  }
+}
