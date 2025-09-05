@@ -58,7 +58,7 @@ void solve() {
             mp[arr[i]]--;
             if(mp[arr[i]] == 0) mp.erase(arr[i]);
             i++;
-        }
+        } 
 
         goodSegments += (j - i + 1);
     }
