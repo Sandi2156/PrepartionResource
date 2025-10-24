@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Java (with input/output redirection)",
+      "type": "shell",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "javac \"${file}\" && java -cp \"${workspaceFolder}\" ${relativeFileDirname}\\${fileBasenameNoExtension} < \"${workspaceFolder}\\input.txt\" > \"${workspaceFolder}\\output.txt\""
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
