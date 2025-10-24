@@ -20,31 +20,30 @@ public class Main {
             out = new PrintWriter(System.out);
         }
 
-        // int t = 1;  // Number of test cases
-        int t = in.nextInt(); // Uncomment if multiple test cases
+        int t = 1;  // Number of test cases
+        // int t = in.nextInt(); // Uncomment if multiple test cases
         for (int tc = 0; tc < t; tc++) {
-            // solve();
-            out.println(tc);
+            solve();
+            // out.println(tc);
         }
         out.close();
     }
 
     static void solve() throws IOException {
         int n = in.nextInt();
-        int[] sizes = new int[n];
+        int missingNumber = 0;
 
-        for (int i = 0; i < n; i++) {
-            sizes[i] = in.nextInt();
+        for(int i = 1; i < n; i++) {
+            int val = in.nextInt();
+
+            missingNumber ^= val;
         }
 
-        int[] dp = new int[n];
-        Arrays.fill(dp, -1);
-
-        int max = 0;
-        for (int i = 0; i < sizes.length; i++) {
-            max = Math.max(max, solveHelper(i, sizes, dp));
+        for(int i = 1; i <= n; i++) {
+            missingNumber ^= i;
         }
-        out.println(max);
+
+        out.println(missingNumber);
     }
 
     static int solveHelper(int index, int[] sizes, int[] dp) {
