@@ -30,7 +30,21 @@ public class Main {
     }
 
     static void solve() throws IOException {
-        
+        String s = in.next();
+
+        int maxLen = 0;
+        int i = 0;
+        while(i < s.length()) {
+            int j = i;
+            while(j < s.length() && s.charAt(j) == s.charAt(i)) {
+                j++;
+            }
+
+            maxLen = Math.max(maxLen, j - i);
+            i = j;
+        }
+
+        out.println(maxLen);
     }
 
     // ---------- FastReader class ----------

@@ -30,7 +30,17 @@ public class Main {
     }
 
     static void solve() throws IOException {
-        
+        int n = in.nextInt();
+        int[] arr = in.readIntArray(n);
+
+        long minMoves = 0, prevVal = arr[0];
+        for(int i = 1; i < n; i++) {
+            if(arr[i] < prevVal) {
+                minMoves += (prevVal - arr[i]);
+            } else prevVal = arr[i];
+        }
+
+        out.println(minMoves);
     }
 
     // ---------- FastReader class ----------
